@@ -17,5 +17,10 @@ public class Triangle extends Figure {
         canvas.getGraphicsContext2D().strokeLine(xTopPoint, yTopPoint, xRightPoint, yRightPoint);
         canvas.getGraphicsContext2D().strokeLine(xRightPoint, yRightPoint, xLeftPoint, yLeftPoint);
         canvas.getGraphicsContext2D().strokeLine(xLeftPoint, yLeftPoint, xTopPoint, yTopPoint);
+
+//        Прямой треугольник
+//        canvas.getGraphicsContext2D().strokeLine(x1, y1,x1, y2);
+//        canvas.getGraphicsContext2D().strokeLine(x1, y2,x2, y2);
+//        canvas.getGraphicsContext2D().strokeLine(x2, y2,x1, y1);
     }
 }
