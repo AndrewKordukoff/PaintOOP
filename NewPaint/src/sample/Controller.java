@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import sample.Shape.Circle;
 import sample.Shape.Figure;
 import sample.Shape.Line;
 import sample.Shape.Rectangle;
@@ -21,6 +22,7 @@ public class Controller {
     Figure figure;
     Line line = new Line();
     Rectangle rectangle = new Rectangle();
+    Circle circle = new Circle();
 
 
 
@@ -30,6 +32,11 @@ public class Controller {
     public void drawRectangle(ActionEvent actionEvent) {
         figure = rectangle;
     }
+    public void drawCircle(ActionEvent actionEvent) {
+        figure = circle;
+    }
+
+    
 
     public void mousePressed(MouseEvent mouseEvent) {
         x1 = mouseEvent.getX();
@@ -41,6 +48,7 @@ public class Controller {
         y2 = mouseEvent.getY();
         figure.draw(myCanvas, x1, y1, x2, y2);
     }
+
 
 
 }
