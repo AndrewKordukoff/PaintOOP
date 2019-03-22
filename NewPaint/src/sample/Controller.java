@@ -7,6 +7,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import sample.Shape.Figure;
 import sample.Shape.Line;
+import sample.Shape.Rectangle;
 
 public class Controller {
     double x1;
@@ -19,11 +20,15 @@ public class Controller {
 
     Figure figure;
     Line line = new Line();
+    Rectangle rectangle = new Rectangle();
 
 
 
     public void drawLine(ActionEvent actionEvent) {
         figure = line;
+    }
+    public void drawRectangle(ActionEvent actionEvent) {
+        figure = rectangle;
     }
 
     public void mousePressed(MouseEvent mouseEvent) {
@@ -36,4 +41,6 @@ public class Controller {
         y2 = mouseEvent.getY();
         figure.draw(myCanvas, x1, y1, x2, y2);
     }
+
+
 }
